@@ -12,13 +12,19 @@ user_choice_2 = gets.chomp.to_i
 puts "Comedies"
 user_choice_3 = gets.chomp.to_i
 
-if user_choice_1 >= 4 
+if user_choice_1 >= 4
   puts documentary_title
 elsif user_choice_1 < 4 && user_choice_2 >= 4 && user_choice_3 >= 4
   puts dramedy_title
 elsif user_choice_1 < 4 && user_choice_2 >= 4 && user_choice_3 < 4
   puts drama_title
 elsif user_choice_1 < 4 && user_choice_2 < 4 && user_choice_3 >= 4
+  puts comedy_title
+elsif user_choice_1 > user_choice_2 && user_choice_1 > user_choice_3
+  puts documentary_title
+elsif user_choice_2 > user_choice_1 && user_choice_2 >user_choice_3
+  puts drama_title
+elsif user_choice_3 > user_choice_1 && user_choice_3 > user_choice_2
   puts comedy_title
   else
   puts "I recommend this book to you: \n #{book_title}"
